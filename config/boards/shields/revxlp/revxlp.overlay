@@ -33,7 +33,7 @@
 	backlight: backlight_leds {
 		compatible = "gpio-leds";
 		led_mosfet {
-			gpios = <&xiao_d 7 GPIO_ACTIVE_LOW>;
+			gpios = <&xiao_d 7 GPIO_ACTIVE_HIGH>;
 			label = "Backlight LED 0";
 		};
 	};
