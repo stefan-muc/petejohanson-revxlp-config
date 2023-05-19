@@ -51,8 +51,8 @@
 // @see https://github.com/bzgec/zmk-config/ for inspiration, and related issue
 #include "keys_de.h"
 
-#define BAS_L 0
-#define QWE_L 1
+#define QWE_L 0
+#define FRO_L 1
 #define NUM_L 2
 #define SYM_L 3
 #define FUN_L 4
@@ -165,22 +165,6 @@
                // vi{ :EasyAlign * & r0
                // &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12 &len_______12
 
-        frobiac_layer { /*
-  ╭────────────────────────╮       ╭───────────────────────╮
-  │ RCT  K   U   Q   .   J │       │ P   C   L   M   F     │
-  │ TAB  H   I   E   A   O │       │ H   J   K   L   ;     │
-  │      X   Y   -   ,   / ╰──╮ ╭──╯ B   G   W   V   Z     │
-  ╰───────────────╮GUI CTS ATA│ │NES SHB SYR ╭─────────────╯
-                  ╰───────────╯ ╰────────────╯            */
-            label = "Base";
-            bindings = <
-                  &kp RCTL      &kp K         &kp U         &kp Q         &kp DE_DOT    &kp J         &kp P         &kp C         &kp L         &kp M         &kp F         &none
-                  &kp TAB       &kp H         &kp I         &kp E         &kp A         &kp O         &kp D         &kp T         &kp R         &kp N         &kp S         &none
-                  &none         &kp X         &kp DE_Y      &kp DE_MINUS  &kp DE_COMMA  &both_slh     &kp B         &kp G         &kp W         &kp V         &kp DE_Z      &none
-               /* &             &             &*/           &td_gui_ralt  &mt LC_SPC    &mt LA_TAB    &lt NUML_ESC  &mt LS_BKSP   &lt SYML_RET
-                >;
-        };
-
         qwertz_layer { /* Use lower-right pinky in system layer to activate qwertz layer over frobiac default
   ╭────────────────────────╮       ╭───────────────────────╮
   │      Q   W   E   R   T │       │ Z   U   I   O   P  Ü  │
@@ -195,6 +179,22 @@
                   &kp LSHFT     &kp DE_Y      &kp X         &kp C         &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp DE_MINUS  &mt RSHIFT DE_FSLH
                /* &             &             &*/           &kp LGUI      &mt LC_TAB    &mt LA_BKSP   &lt NUML_SPC  &mt LS_RET    &lt SYML_ESC
             >;
+        };
+
+        frobiac_layer { /*
+  ╭────────────────────────╮       ╭───────────────────────╮
+  │ RCT  K   U   Q   .   J │       │ P   C   L   M   F     │
+  │ TAB  H   I   E   A   O │       │ H   J   K   L   ;     │
+  │      X   Y   -   ,   / ╰──╮ ╭──╯ B   G   W   V   Z     │
+  ╰───────────────╮GUI CTS ATA│ │NES SHB SYR ╭─────────────╯
+                  ╰───────────╯ ╰────────────╯            */
+            label = "Base";
+            bindings = <
+                  &kp RCTL      &kp K         &kp U         &kp Q         &kp DE_DOT    &kp J         &kp P         &kp C         &kp L         &kp M         &kp F         &none
+                  &kp TAB       &kp H         &kp I         &kp E         &kp A         &kp O         &kp D         &kp T         &kp R         &kp N         &kp S         &none
+                  &none         &kp X         &kp DE_Y      &kp DE_MINUS  &kp DE_COMMA  &both_slh     &kp B         &kp G         &kp W         &kp V         &kp DE_Z      &none
+               /* &             &             &*/           &td_gui_ralt  &mt LC_SPC    &mt LA_TAB    &lt NUML_ESC  &mt LS_BKSP   &lt SYML_RET
+                >;
         };
 
         nav_layer { /*
