@@ -131,8 +131,8 @@
 
         system_layer_combo_upper_pinkies {
             timeout-ms = <50>;
-                key-positions = <0 11>;
-                bindings = <&sl SYS_L>;
+            key-positions = <0 11>;
+            bindings = <&sl SYS_L>;
         };
     };
 
@@ -199,10 +199,10 @@
 
         nav_layer { /*
   ╭────────────────────────╮       ╭───────────────────────╮
-  │    PgU BkS Up  Del PgD │       │ ß   7   8   9   ä     │
-  │    Hom Lef Dow Rig End │       │ .   4   5   6   ö     │
+  │    PgU BkS Up  Del PgD │       │ ß   7   8   9   ä  MOU│
+  │    Hom Lef Dow Rig End │       │ .   4   5   6   ö  FUN│
   │            Ins         ╰──╮ ╭──╯ 0   1   2   3   ü     │
-  ╰───────────────╮           │ │            ╭─────────────╯
+  ╰───────────────╮           │ │    FUN     ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "NavNum";
             bindings = <
