@@ -288,15 +288,15 @@
         // Accessed via sticky layer: Repeats are inconvenient, but should not be needed here.
         system_layer { /*
   ╭────────────────────────╮       ╭───────────────────────╮
-  │ OUT BT+ BT-        BTX │       │ BOOT          MUT     │
-  │ USB                    │       │ RST                   │
+  │ OUT BT- BT+        BTX │       │ BOOT          MUT     │
+  │ USB                    │       │ RST               FROB│
   │ BT  BT0 BT1 BT2 BT3 BT4╰──╮ ╭──╯                   QWER│
   ╰───────────────╮           │ │            ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "System";
             bindings = <
-                  &out OUT_TOG  &bt BT_NXT    &bt BT_PRV    &none         &none         &bt BT_CLR    &bootloader   &none         &none         &none         &kp C_MUTE    &kp DE_Y
-                  &out OUT_USB  &none         &none         &none         &none         &none         &sys_reset    &none         &none         &none         &none         &none
+                  &out OUT_TOG  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR    &bootloader   &none         &none         &none         &kp C_MUTE    &kp DE_Y
+                  &out OUT_USB  &none         &none         &none         &none         &none         &sys_reset    &none         &none         &none         &none         &tog FRO_L
                   &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &tog QWE_L
                   &trans        &trans        &trans        &trans        &trans        &trans
                 >;
