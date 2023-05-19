@@ -271,14 +271,14 @@
 
         mouse_layer { /*
   ╭────────────────────────╮       ╭───────────────────────╮
-  │         WLe MUp WRi    │       │ BLU       BUp VUp MOU │
+  │/MOU     WLe MUp WRi    │       │ BLU       BUp VUp /MOU│
   │         MLe MDn MRi WUp│       │ BLD       BDn VDn     │
   │         LMB MMB RMB WDn╰──╮ ╭──╯ BLT           Mut     │
   ╰───────────────╮           │ │            ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "Mouse";
             bindings = <
-                  &none         &none         &mmv MSC_LE   &mmv MMV_UP   &mmv MSC_RI   &none         &bl BL_INC    &none         &none         &kp C_BRI_UP  &kp C_VOL_UP  &tog MOU_L
+                  &tog MOU_L    &none         &mwh MSC_LE   &mmv MMV_UP   &mwh MSC_RI   &none         &bl BL_INC    &none         &none         &kp C_BRI_UP  &kp C_VOL_UP  &tog MOU_L
                   &none         &none         &mmv MMV_LE   &mmv MMV_DO   &mmv MMV_RI   &mwh MSC_UP   &bl BL_DEC    &none         &none         &kp C_BRI_DN  &kp C_VOL_DN  &none
                   &none         &none         &mkp LCLK     &mkp MCLK     &mkp RCLK     &mwh MSC_DO   &bl BL_TOG    &none         &none         &none         &kp K_MUTE    &none
                   &trans        &trans        &trans        &trans        &trans        &trans
