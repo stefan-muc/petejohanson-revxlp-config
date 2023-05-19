@@ -218,7 +218,7 @@
   │    PgU BkS Up  Del PgD │       │ ß   7   8   9   ä  MOU│
   │    Hom Lef Dow Rig End │       │ .   4   5   6   ö  FUN│
   │            Ins         ╰──╮ ╭──╯ 0   1   2   3   ü     │
-  ╰───────────────╮           │ │    FUN     ╭─────────────╯
+  ╰───────────────╮           │ │            ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "NavNum";
             bindings = <
@@ -232,7 +232,7 @@
                   // - put shifted umlauts also on FUN_L at same spot
                   // - try L1+L2 vs L2+L1 order for 2 layers
                   // - use a different layer accessor: like center most thumbs but will have similar issues with Alt-Direction then.
-                  &trans        &trans        &trans        &trans        &mo FUN_L     &trans
+                  &trans        &trans        &trans        &trans        &trans        &trans
                 >;
         };
 
