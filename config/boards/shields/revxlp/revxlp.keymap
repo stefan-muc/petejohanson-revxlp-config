@@ -121,17 +121,6 @@
 	    };
     };
 
-    cond_layers {
-        compatible = "zmk,conditional-layers";
-        /*
-        tri {
-            // This disables &tog / &to for MOU_L !!!
-            if-layers = <NUM_L SYM_L>;
-            then-layer = <MOU_L>;
-        };
-        */
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -139,6 +128,12 @@
             timeout-ms = <50>;
             key-positions = <0 11>;
             bindings = <&sl SYS_L>;
+        };
+
+        mouse_layer_combo_thumbkeys {
+            timeout-ms = <50>;
+            key-positions = <39 40>;
+            bindings = <&mo MOU_L>;
         };
     };
 
