@@ -75,6 +75,12 @@
 #define LS_RET   LSHIFT RET
 #define SYML_ESC SYM_L  ESC
 
+// Qwertz (Stefan)
+#define LA_SPC   LALT   SPACE
+#define NUML_BSP NUM_L  BKSP
+#define SHFT_RA  RSHIFT RALT
+
+
 // Allow tap-repeats
 &lt {
         quick-tap-ms = <200>;
@@ -156,6 +162,16 @@
             tapping-term-ms = <350>;
             bindings = <&kp LGUI>, <&kp LALT>, <&kp RCTL>;
         };
+
+        // To be able to use Alt-Tab when both are on the same key due to Tab swap with Space.
+        // @TOOD: RAlt-Tab not the same as LAlt-Tab on windows, and double tapping not very easy on left thumb with 200ms.
+        td_gui_lshft: tap_dance_gui_lshift {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_GUI_LSHIFT";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&kp LGUI>, <&kp LSHIFT>;
+        };
     };
 
 
@@ -167,17 +183,17 @@
 
         qwertz_layer { /* Use lower-right pinky in system layer to activate qwertz layer over frobiac default
   ╭────────────────────────╮       ╭───────────────────────╮
-  │      Q   W   E   R   T │       │ Z   U   I   O   P  Ü  │
+  │ ESC  Q   W   E   R   T │       │ Z   U   I   O   P  Ü  │
   │      A   S   D   F   G │       │ H   J   K   L   Ö  Ä  │
   │ LSH  Y   X   C   V   B ╰──╮ ╭──╯ N   M   ,   .   - RSH/│
-  ╰───────────────╮GUI CTA ABS│ │NSP SRE SYE ╭─────────────╯
+  ╰───────────────╮GUI CTA ASP│ │NBP SYE ASH ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "Qwertz";
             bindings = <
-                  &none         &kp Q         &kp W         &kp E         &kp R         &kp T         &kp DE_Z      &kp U         &kp I         &kp O         &kp P         &kp DE_UDIA
+                  &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T         &kp DE_Z      &kp U         &kp I         &kp O         &kp P         &kp DE_UDIA
                   &none         &kp A         &kp S         &kp D         &kp F         &kp G         &kp H         &kp J         &kp K         &kp L         &kp DE_ODIA   &kp DE_ADIA
                   &kp LSHFT     &kp DE_Y      &kp X         &kp C         &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp DE_MINUS  &mt RSHIFT DE_FSLH
-               /* &             &             &*/           &kp LGUI      &mt LC_TAB    &mt LA_BKSP   &lt NUML_SPC  &mt LS_RET    &lt SYML_ESC
+               /* &             &             &*/           &td_gui_lshft &mt LC_TAB    &mt LA_SPC    &lt NUML_BSP  &lt SYML_RET  &mt SHFT_RA
             >;
         };
 
