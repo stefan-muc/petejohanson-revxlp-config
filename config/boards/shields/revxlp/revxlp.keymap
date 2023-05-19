@@ -280,7 +280,7 @@
             bindings = <
                   &tog MOU_L    &none         &mwh MSC_LE   &mmv MMV_UP   &mwh MSC_RI   &none         &bl BL_INC    &none         &none         &kp C_BRI_UP  &kp C_VOL_UP  &tog MOU_L
                   &none         &none         &mmv MMV_LE   &mmv MMV_DO   &mmv MMV_RI   &mwh MSC_UP   &bl BL_DEC    &none         &none         &kp C_BRI_DN  &kp C_VOL_DN  &none
-                  &none         &none         &mkp LCLK     &mkp MCLK     &mkp RCLK     &mwh MSC_DO   &bl BL_TOG    &none         &none         &none         &kp K_MUTE    &none
+                  &none         &none         &mkp LCLK     &mkp MCLK     &mkp RCLK     &mwh MSC_DO   &bl BL_TOG    &none         &none         &none         &kp C_MUTE    &none
                   &trans        &trans        &trans        &trans        &trans        &trans
                 >;
         };
@@ -288,14 +288,14 @@
         // Accessed via sticky layer: Repeats are inconvenient, but should not be needed here.
         system_layer { /*
   ╭────────────────────────╮       ╭───────────────────────╮
-  │ OUT BT- BT+        BTX │       │ BOOT          MUT     │
+  │ OUT BT- BT+        BTX │       │ BOOT                  │
   │ USB                    │       │ RST               FROB│
   │ BT  BT0 BT1 BT2 BT3 BT4╰──╮ ╭──╯                   QWER│
   ╰───────────────╮           │ │            ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "System";
             bindings = <
-                  &out OUT_TOG  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR    &bootloader   &none         &none         &none         &kp C_MUTE    &kp DE_Y
+                  &out OUT_TOG  &bt BT_PRV    &bt BT_NXT    &none         &none         &bt BT_CLR    &bootloader   &none         &none         &none         &none         &kp DE_Y
                   &out OUT_USB  &none         &none         &none         &none         &none         &sys_reset    &none         &none         &none         &none         &tog FRO_L
                   &out OUT_BLE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none         &none         &none         &none         &none         &tog QWE_L
                   &trans        &trans        &trans        &trans        &trans        &trans
