@@ -158,8 +158,6 @@
             bindings = <&kp LGUI>, <&kp LALT>, <&kp RCTL>;
         };
 
-        // To be able to use Alt-Tab when both are on the same key due to Tab swap with Space.
-        // @TOOD: RAlt-Tab not the same as LAlt-Tab on windows, and double tapping not very easy on left thumb with 200ms.
         td_gui_lshft: tap_dance_gui_lshift {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_GUI_LSHIFT";
