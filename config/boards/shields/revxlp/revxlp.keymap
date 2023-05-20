@@ -135,6 +135,30 @@
             key-positions = <38 39>;
             bindings = <&mo MOU_L>;
         };
+
+        umlauts_combo_a {
+            timeout-ms = <200>;
+            key-positions = <1 13>;
+            bindings = <&kp DE_ADIA>;
+        };
+
+        umlauts_combo_o {
+            timeout-ms = <200>;
+            key-positions = <9 21>;
+            bindings = <&kp DE_ODIA>;
+        };
+
+        umlauts_combo_u {
+            timeout-ms = <200>;
+            key-positions = <7 19>;
+            bindings = <&kp DE_UDIA>;
+        };
+
+        umlauts_combo_s {
+            timeout-ms = <200>;
+            key-positions = <2 14>;
+            bindings = <&kp DE_SS>;
+        };
     };
 
     behaviors {
