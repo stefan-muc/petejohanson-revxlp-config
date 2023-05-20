@@ -78,7 +78,7 @@
 // Qwertz (Stefan)
 #define LA_SPC   LALT   SPACE
 #define NUML_BSP NUM_L  BKSP
-#define SHFT_RA  RSHIFT RALT
+#define RSH_RA   RSHIFT RALT
 
 
 // Allow tap-repeats
@@ -181,14 +181,14 @@
   │ ESC  Q   W   E   R   T │       │ Z   U   I   O   P  Ü  │
   │      A   S   D   F   G │       │ H   J   K   L   Ö  Ä  │
   │ LSH  Y   X   C   V   B ╰──╮ ╭──╯ N   M   ,   .   - RSH/│
-  ╰───────────────╮GUI CTA ASP│ │NBP SYE ASH ╭─────────────╯
+  ╰───────────────╮GUI CTA ASP│ │NBP ASH SYE ╭─────────────╯
                   ╰───────────╯ ╰────────────╯            */
             label = "Qwertz";
             bindings = <
                   &kp ESC       &kp Q         &kp W         &kp E         &kp R         &kp T         &kp DE_Z      &kp U         &kp I         &kp O         &kp P         &kp DE_UDIA
                   &none         &kp A         &kp S         &kp D         &kp F         &kp G         &kp H         &kp J         &kp K         &kp L         &kp DE_ODIA   &kp DE_ADIA
                   &kp LSHFT     &kp DE_Y      &kp X         &kp C         &kp V         &kp B         &kp N         &kp M         &kp COMMA     &kp DOT       &kp DE_MINUS  &mt RSHIFT DE_FSLH
-               /* &             &             &*/           &td_gui_lshft &mt LC_TAB    &mt LA_SPC    &lt NUML_BSP  &lt SYML_RET  &mt SHFT_RA
+               /* &             &             &*/           &td_gui_lshft &mt LC_TAB    &mt LA_SPC    &lt NUML_BSP  &mt RSH_RA    &lt SYML_RET
             >;
         };
 
