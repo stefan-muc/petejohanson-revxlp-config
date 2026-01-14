@@ -125,7 +125,7 @@
         compatible = "zmk,combos";
 
         system_layer_combo_upper_pinkies {
-            timeout-ms = <50>;
+            timeout-ms = <150>;
             key-positions = <0 11>;
             bindings = <&sl SYS_L>;
         };
